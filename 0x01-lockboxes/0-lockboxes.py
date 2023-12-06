@@ -6,6 +6,8 @@
 def canUnlockAll(boxes):
     """A function that determines if all the boxes in a list of lists
     can be accessed from box[0] """
+    if len(boxes) == 0:
+        return False
     boxes_length = len(boxes) - 1
     myList = []
     newList = []
