@@ -27,3 +27,17 @@ print(canUnlockAll([[], []]))
 print(canUnlockAll([[1], []]))
 
 print(canUnlockAll([[], [1]]))
+
+print(canUnlockAll([[1], [3, 4], [1], [4], [5], [], [], [], []]))
+
+print(canUnlockAll([[1], [3, 4], [1], [4], [5], [], []]))
+
+print(canUnlockAll([[1], [3, 4], [1], [4], [5], [], [], []]))
+
+print(canUnlockAll([[], [3, 4], [1], [4], [5], [], []]))
+
+print(canUnlockAll([[], [3, 4], [1], [4], [5]]))
+
+print(canUnlockAll([[1], [0], [1], [4], [5]]))
+
+print(canUnlockAll([[0], [0], [0], [0]]))
