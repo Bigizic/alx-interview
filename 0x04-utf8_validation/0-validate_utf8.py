@@ -18,8 +18,8 @@ def validUTF8(data):
                 count = 2
             elif (item >> 3) == 0b11110:
                 count = 3
-            """else:
-                return False"""
+            else:
+                return True
         else:
             if (item >> 6) != 0b10:
                 return False
