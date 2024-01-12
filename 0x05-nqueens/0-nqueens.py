@@ -8,7 +8,7 @@ import sys
 def checks(n):
     """performs extra checks for N
     """
-    if len(n) > 2:
+    if len(n) != 2:
         print('Usage: nqueens N')
         exit(1)
 
