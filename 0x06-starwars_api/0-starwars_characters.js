@@ -7,7 +7,7 @@ const starWar = (url) => {
     if (error) { console.error(error); return; }
     const data = JSON.parse(body);
     for (const items of data.results) {
-      if (parseInt(number) === parseInt(items.episode_id)) {
+      if (parseInt(number) === items.episode_id) {
         async function letsWaitForNames () {
           for (const link of items.characters) {
             await new Promise((resolve, reject) => {
