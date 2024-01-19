@@ -26,3 +26,4 @@ const starWar = (url) => {
   });
 };
 starWar('https://swapi-api.alx-tools.com/api/films/');
+// starWar('https://ezyurl.xyz');
