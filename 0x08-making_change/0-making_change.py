@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+"""A solution to makeChange LeetCode Interview question
+"""
 
 def makeChange(coins, total):
-    """Determines  the fewest number of coins needed to meet a given amount
+    """Determines the fewest number of coins needed to meet a given amount
     total
     Parameters:
         - @param {coins}: List
