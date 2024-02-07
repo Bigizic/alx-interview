@@ -2,6 +2,7 @@
 """A Technical interview question
 """
 
+
 def island_perimeter(grid):
     """Created a new list from the grid that forms each cell from each
         column of the original gird, then i count how many times 1 in
