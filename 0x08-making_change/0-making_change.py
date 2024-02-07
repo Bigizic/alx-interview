@@ -2,8 +2,10 @@
 """A solution to makeChange LeetCode Interview question
 """
 
+from typing import List
 
-def makeChange(coins, total):
+
+def makeChange(coins: List[int], total: int) -> int:
     """Determines the fewest number of coins needed to meet a given amount
     total
     Parameters:
