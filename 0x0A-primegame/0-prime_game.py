@@ -49,6 +49,8 @@ def primeNumbers(n: int) -> list:
 def isWinner(x, nums):
     """Implementation
     """
+    if x < 1 or not nums:
+        return None
     myDict = []
     for i in nums:
         myDict.append(primeNumbers(i))
@@ -72,4 +74,6 @@ def isWinner(x, nums):
                 curr_p.append('Winner')
             curr_p.append(i)
             p_index = (p_index + 1) % 2"""
+    if Maria.count('Winner') == Ben.count('Winner'):
+        return None
     return 'Maria' if Maria.count('Winner') > Ben.count('Winner') else 'Ben'
