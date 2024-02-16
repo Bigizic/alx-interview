@@ -50,17 +50,26 @@ def isWinner(x, nums):
     """Implementation
     """
     myDict = []
-    players = {'Maria': '', 'Ben': ''}
     for i in nums:
         myDict.append(primeNumbers(i))
-    even_or_odd = ['Maria']
+    p_index = 0
+    Dict = {'Maria': [], 'Ben': []}
+    Maria = []
+    Ben = []
     for _ in range(x):
-        if len(myDict[_]) == 1:
-            even_or_odd.append('Ben')
-        if isEvenOrOdd(len(myDict[_])) == 'even':
-            even_or_odd.append('Maria')
-        else:
-            even_or_odd.append('Ben')
-    if even_or_odd.count('Maria') > even_or_odd.count('Ben'):
-        return 'Maria'
-    return 'Ben'
+        for i in myDict[_]:
+            if len(myDict[_]) == 1 and i is None:
+                Ben.append('Winner')
+        if isEvenOrOdd(len(myDict[_])) == 'odd' and i is not None:
+            Maria.append('Winner')
+        if isEvenOrOdd(len(myDict[_])) == 'even' and i is not None:
+            Ben.append('Winner')
+            """curr_p = Dict['Maria'] if p_index == 0 else Dict['Ben']
+            if last_number == i and i != None:
+                curr_p.append('Winner')
+            if last_number == i and i == None:
+                curr_p = Dict['Ben']
+                curr_p.append('Winner')
+            curr_p.append(i)
+            p_index = (p_index + 1) % 2"""
+    return 'Maria' if Maria.count('Winner') > Ben.count('Winner') else 'Ben'
